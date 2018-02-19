@@ -60,7 +60,7 @@ public class SsoApprovalEndpoint {
 
     private static final String DENIAL = "<form id='denialForm' name='denialForm' action='${path}/oauth/authorize' method='post'><input name='user_oauth_approval' value='false' type='hidden'/>%csrf%<label><input name='deny' value='Deny' type='submit'/></label></form>";
 
-    private static final String TEMPLATE = "<html><body><div style='display: none'><form id='confirmationForm' name='confirmationForm' action='${path}/oauth/authorize' method='post'><input name='user_oauth_approval' value='true' type='hidden'/>%csrf%%scopes%<label><input name='authorize' value='Authorize' type='submit'/></label></form>%denial%</div><script type='text/javascript'>document.getElementsByName('confirmationForm').submit();</script></body></html>";
+    private static final String TEMPLATE = "<html><body><div style='display: none'><form id='confirmationForm' name='confirmationForm' action='${path}/oauth/authorize' method='post'><input name='user_oauth_approval' value='true' type='hidden'/>%csrf%%scopes%<label><input name='authorize' value='Authorize' type='submit'/></label></form>%denial%</div><script type='text/javascript'>document.getElementById('confirmationForm').submit();</script></body></html>";
 
     private static final String SCOPE = "<li><div class='form-group'>%scope%: <input type='radio' name='%key%'"
             + " value='true'%approved%>Approve</input> <input type='radio' name='%key%' value='false'%denied%>Deny</input></div></li>";
