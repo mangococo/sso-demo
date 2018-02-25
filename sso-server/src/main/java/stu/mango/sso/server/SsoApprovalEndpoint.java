@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServletRequest;
 import java.util.Map;
 
 /**
- * 当应用登录后，默认授权
+ * 当应用登录后，利用前端手段默认授权
  */
 @RestController
 @SessionAttributes("authorizationRequest")
